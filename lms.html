@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LMS Portal | Sashika Dilshan</title>
+  <meta name="description" content="Learning Management System for Grade 10 and Grade 11 ICT Classes. access notes and online exams.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .page-container {
+      padding: 130px 20px 60px;
+      max-width: 1000px;
+      margin: 0 auto;
+      min-height: 100vh;
+    }
+    
+    .page-heading {
+      text-align: center;
+      font-size: 45px;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+    
+    .page-heading span {
+      background: linear-gradient(to right, #00f2fe, #4facfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-subtitle {
+      text-align: center;
+      color: #cbd5e1;
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+
+    .lms-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .grade-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, border-color 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .grade-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+    }
+
+    .grade-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 5px;
+    }
+
+    .grade-10::before {
+      background: linear-gradient(90deg, #ff0844, #ffb199);
+    }
+
+    .grade-11::before {
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+    }
+
+    .grade-title {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: white;
+      text-align: center;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .grade-10 .grade-title { color: #ffb199; }
+    .grade-11 .grade-title { color: #00f2fe; }
+
+    .lms-module {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      margin-bottom: 15px;
+      transition: all 0.3s;
+      text-decoration: none;
+      color: white;
+    }
+
+    .lms-module:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateX(10px);
+    }
+
+    .lms-module-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .lms-module i {
+      font-size: 24px;
+      width: 30px;
+      text-align: center;
+    }
+
+    .Notes-icon { color: #b224ef; }
+    .Exam-icon { color: #25D366; }
+
+    .lms-module-title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .lms-module-desc {
+      font-size: 14px;
+      color: #94a3b8;
+    }
+    
+    .lms-module-btn {
+      background: rgba(255,255,255,0.1);
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .lms-module:hover .lms-module-btn {
+      background: var(--primary);
+      color: var(--dark);
+    }
+
+    @media (max-width: 768px) {
+      .lms-grid {
+        grid-template-columns: 1fr;
+      }
+      .page-heading {
+        font-size: 35px;
+      }
+      .page-subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
+      .grade-card {
+        padding: 30px;
+      }
+      .grade-title {
+        font-size: 28px;
+        margin-bottom: 25px;
+      }
+      .page-container {
+        padding: 140px 15px 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page-heading {
+        font-size: 28px;
+      }
+      .page-subtitle {
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+      .grade-card {
+        padding: 20px;
+      }
+      .grade-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      .lms-module {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      .lms-module-btn {
+        align-self: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="background-container" id="bg-container">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="logo">SASHIKA <span>DILSHAN</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="lms.html" style="color: var(--primary);">Class (LMS)</a></li>
+      <li><a href="index.html#register">Register</a></li>
+      <li><a href="Soft.html">Downloads</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxnIzjlwXb35KCbCbCo0sxkIll6S4u6WugaHI3UVw_ooGitA/viewform?usp=header" class="btn-join">Join Now</a>
+  </nav>
+
+  <div class="page-container">
+    <h1 class="page-heading">Student <span>LMS Portal</span></h1>
+    <p class="page-subtitle">Access your study notes, presentations, and participate in online examinations.</p>
+    
+    <div class="lms-grid">
+      <!-- Grade 10 Section -->
+      <div class="grade-card grade-10">
+        <h2 class="grade-title"><i class="fas fa-user-graduate"></i> Grade 10</h2>
+        
+        <a href="#" class="lms-module">
+          <div class="lms-module-info">
+            <i class="fas fa-book-open Notes-icon"></i>
+            <div>
+              <div class="lms-module-title">Study Notes</div>
+              <div class="lms-module-desc">Access PDFs and slides</div>
+            </div>
+          </div>
+          <span class="lms-module-btn">Open</span>
+        </a>
+
+        <a href="#" class="lms-module">
+          <div class="lms-module-info">
+            <i class="fas fa-laptop-code Exam-icon"></i>
+            <div>
+              <div class="lms-module-title">Online Exams</div>
+              <div class="lms-module-desc">MCQ and structured papers</div>
+            </div>
+          </div>
+          <span class="lms-module-btn">Start</span>
+        </a>
+      </div>
+
+      <!-- Grade 11 Section -->
+      <div class="grade-card grade-11">
+        <h2 class="grade-title"><i class="fas fa-user-tie"></i> Grade 11 (O/L)</h2>
+        
+        <a href="#" class="lms-module">
+          <div class="lms-module-info">
+            <i class="fas fa-book-open Notes-icon"></i>
+            <div>
+              <div class="lms-module-title">Study Notes</div>
+              <div class="lms-module-desc">O/L Focus & Past Papers</div>
+            </div>
+          </div>
+          <span class="lms-module-btn">Open</span>
+        </a>
+
+        <a href="#" class="lms-module">
+          <div class="lms-module-info">
+            <i class="fas fa-laptop-code Exam-icon"></i>
+            <div>
+              <div class="lms-module-title">Online Exams</div>
+              <div class="lms-module-desc">Term Tests & Mock Exams</div>
+            </div>
+          </div>
+          <span class="lms-module-btn">Start</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Sashika Dilshan ICT Class. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Legal | Sashika Dilshan</title>
+  <meta name="description" content="Contact details, Privacy Policy, and Terms & Conditions for Sashika Dilshan's ICT Classes.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .page-container {
+      padding: 130px 20px 60px;
+      max-width: 900px;
+      margin: 0 auto;
+      min-height: 100vh;
+    }
+    
+    .page-heading {
+      text-align: center;
+      font-size: 45px;
+      margin-bottom: 50px;
+      font-weight: 800;
+    }
+    
+    .page-heading span {
+      background: linear-gradient(to right, #00f2fe, #4facfe);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .info-section {
+      background: var(--card-bg);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+      margin-bottom: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .info-section:hover {
+      transform: translateY(-5px);
+    }
+
+    .info-section h3 {
+      font-size: 28px;
+      margin-bottom: 25px;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .info-section p, .info-section ul {
+      color: #cbd5e1;
+      line-height: 1.8;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    .info-section ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    .info-section ul li {
+      margin-bottom: 10px;
+    }
+    
+    .info-section ul li strong {
+      color: white;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 18px;
+    }
+
+    .contact-item i {
+      color: var(--secondary);
+      font-size: 26px;
+      width: 35px;
+      text-align: center;
+    }
+    
+    .contact-item a, .contact-item span {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+      font-weight: 600;
+    }
+
+    .contact-item a:hover {
+      color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .page-heading {
+        font-size: 35px;
+        margin-bottom: 30px;
+      }
+      .info-section {
+        padding: 25px;
+      }
+      .info-section h3 {
+        font-size: 24px;
+      }
+      .contact-item {
+        font-size: 16px;
+      }
+      .contact-item i {
+        font-size: 22px;
+      }
+      .page-container {
+        padding: 140px 15px 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page-heading {
+        font-size: 28px;
+        margin-bottom: 25px;
+      }
+      .info-section {
+        padding: 20px;
+      }
+      .info-section h3 {
+        font-size: 20px;
+      }
+      .info-section p, .info-section ul {
+        font-size: 14px;
+      }
+      .contact-item {
+        font-size: 14px;
+      }
+      .contact-item i {
+        font-size: 18px;
+        width: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="background-container" id="bg-container">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="logo">SASHIKA <span>DILSHAN</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="lms.html">Class (LMS)</a></li>
+      <li><a href="index.html#register">Register</a></li>
+      <li><a href="Soft.html">Downloads</a></li>
+      <li><a href="contact.html" style="color: var(--primary);">Contact</a></li>
+    </ul>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxnIzjlwXb35KCbCbCo0sxkIll6S4u6WugaHI3UVw_ooGitA/viewform?usp=header" class="btn-join">Join Now</a>
+  </nav>
+
+  <div class="page-container">
+    <h1 class="page-heading">Contact <span>& Legal Information</span></h1>
+    
+    <!-- Contact Details -->
+    <div class="info-section">
+      <h3><i class="fas fa-address-book"></i> Contact Details</h3>
+      <p>If you have any questions or wish to join the class, feel free to reach out through any of the following methods:</p>
+      <div class="contact-details" style="margin-top: 25px;">
+        <div class="contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <a href="https://wa.me/94707482177?text=I%20want%20to%20join%20your%20ICT%20class" target="_blank">+94 70 748 2177 (WhatsApp)</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:+94707482177">+94 70 748 2177</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-facebook"></i>
+          <a href="https://www.facebook.com/profile.php?id=61584438620100" target="_blank">Sashika Dilshan</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Privacy Policy -->
+    <div class="info-section">
+      <h3><i class="fas fa-shield-alt"></i> Privacy Policy</h3>
+      <p>Your privacy is critically important to us. This privacy policy outlines what personal information is received and collected by our class operations and how we use it.</p>
+      <ul>
+        <li><strong>Information Collection:</strong> We collect personal details like your name, phone number, and academic level during registration strictly for organizing classes and maintaining attendance.</li>
+        <li><strong>Data Protection:</strong> We implement appropriate data collection, storage, and processing security measures to protect your information against unauthorized access, alteration, or disclosure.</li>
+        <li><strong>Information Sharing:</strong> We do not sell, trade, or rent any student's personal identification information to outside parties or third-party agencies.</li>
+      </ul>
+      <p>If you require any more information or have any questions regarding our privacy policy, please contact us using the details above.</p>
+    </div>
+
+    <!-- Terms and Conditions -->
+    <div class="info-section">
+      <h3><i class="fas fa-file-contract"></i> Terms and Conditions</h3>
+      <p>By registering or joining the ICT classes, you agree to be bound by the following Terms and Conditions:</p>
+      <ul>
+        <li><strong>Code of Conduct:</strong> All students are expected to maintain professional and respectful behavior during all sessions. Disruptive behavior may lead to dismissal from the class.</li>
+        <li><strong>Fees & Payments:</strong> All mandatory course fees should be settled within the provided deadlines. Payments are strictly non-refundable unless otherwise stated.</li>
+        <li><strong>Intellectual Property:</strong> All class materials, notes, tutorials, and papers are the exclusive intellectual property of Sashika Dilshan. They are for your personal study use and any unauthorized copying, distribution, or sharing is strictly prohibited.</li>
+        <li><strong>Policy Changes:</strong> We reserve the right to revise or modify these terms at any time. Significant changes will be communicated out to the students.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Sashika Dilshan ICT Class. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

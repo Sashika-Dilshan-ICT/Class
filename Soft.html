@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Software Hub</title>
+
+<style>
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+/* Body */
+body{
+    background:#f4f7fb;
+}
+
+/* Navbar */
+nav{
+    background:#0d6efd;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* Container */
+.container{
+    padding:20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* Grid */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+}
+
+/* Card */
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* Title */
+.card h2{
+    margin-bottom:10px;
+}
+
+/* Description */
+.card p{
+    font-size:14px;
+    color:#555;
+    margin-bottom:15px;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    padding:10px 15px;
+    background:#0d6efd;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#084298;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+    background:#222;
+    color:white;
+    font-size:14px;
+}
+
+/* Responsive Navigation & Grid */
+@media (max-width: 480px) {
+    nav {
+        font-size: 20px;
+        padding: 12px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        padding: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>💻 Software Download Hub</nav>
+
+<div class="container">
+
+    <div class="grid">
+
+        <!-- Software 1 -->
+        <div class="card">
+            <h2>Audacity</h2>
+            
+            <a href="https://www.mediafire.com/folder/65uhenjqzze96/Audacity" target="_blank" class="btn">Download</a>
+        </div>
+
+        <!-- Software 2 -->
+        <div class="card">
+            <h2>Gimp</h2>
+            
+            <a href="https://www.mediafire.com/folder/i8efg0xc2e44v/Gimp" target="_blank" class="btn">Download</a>
+        </div>
+
+        <!-- Software 3 -->
+        <div class="card">
+            <h2>Vectorian-giotto</h2>
+        
+            <a href="https://www.mediafire.com/folder/chu1diq68pzrt/Vectorian-giotto" target="_blank" class="btn">Download</a>
+        </div>
+
+        <!-- Software 4 -->
+        <div class="card">
+            <h2>VSCode</h2>
+            
+            <a href="https://www.mediafire.com/folder/3ci6rm7vqvgum/VSCode" target="_blank" class="btn">Download</a>
+        </div>
+
+        <!-- Software 5 -->
+        <div class="card">
+            <h2>Windows-movie-maker</h2>
+            
+            <a href="https://www.mediafire.com/folder/5u15ka5vnh5q4/Windows-movie-maker" target="_blank" class="btn">Download</a>
+        </div>
+
+
+    </div>
+
+</div>
+
+<footer>
+© Software Hub | All rights reserved
+</footer>
+
+</body>
+</html>
